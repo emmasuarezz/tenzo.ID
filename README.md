@@ -1,4 +1,4 @@
-# tenzo.ID, a Spotify powered app.
+# tenzo.ID // A Spotify powered app.
 
 Built using react, chakraUI and a whole lot of love <3
 Thanks to the Spotify API, and me, you can access metadata about:
