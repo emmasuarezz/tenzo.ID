@@ -14,9 +14,3 @@ information including their _release date_, _artists_, _label_ and even how _pop
 ## Try it
 
 It's simple! Clone the repo, install the dependencies using _npm install_ and run the app with the command _npm run dev_.
-
-```
-
-
-
-```
