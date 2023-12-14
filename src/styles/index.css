@@ -1,0 +1,94 @@
+.breadcrumb {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.hub-nav {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+
+  font-weight: 300;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.hub-nav li:hover {
+  background-color: #1bc60198;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.card-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(218, 50, 44, 0.15) 0%,
+    rgba(218, 50, 44, 0.75) 100%
+  );
+  border-radius: 10px;
+}
+
+.card-gradient-green {
+  background: linear-gradient(
+    180deg,
+    rgba(28, 198, 1, 0.15) 0%,
+    rgba(28, 198, 1, 0.75) 100%
+  );
+  border-radius: 10px;
+}
+
+.text-accent {
+  background-color: #da322c9b;
+  font-weight: 700;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.text-accent-green {
+  background-color: #1bc60198;
+  font-weight: 700;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.text-green {
+  color: #1cc601;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.inactive {
+  opacity: 0.6;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.top {
+  justify-content: flex-start;
+}
+
+.searchbar {
+  width: 80%;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  outline: none;
+  font-style: italic;
+  color: #da322c;
+}
+
+@media screen and (max-width: 1000px) {
+  .top {
+    justify-content: center;
+  }
+}
