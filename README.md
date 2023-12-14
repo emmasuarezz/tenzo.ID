@@ -2,7 +2,7 @@
 
 Created to help you find the perfect music for your mood, tenzo.ID is a web app that uses the Spotify API to provide you with detailed information about your favorite tracks and albums.
 
-Thanks to me and the Spotify API, you can access metadata about:
+Thanks to the Spotify API, and me, you can access metadata about:
 
 / **tracks**
 
@@ -14,11 +14,13 @@ information including their _release date_, _artists_, _label_ and even how _pop
 
 ## General
 
-I designed the user interface using Figma and then translated the design into the components provided by [ChakraUI](https://chakra-ui.com/), the assets,such as background textures and images, were created by me with Photoshop.
-The entire project was built with React using Vite and TypeScript, with a good set playing in the background.
+I designed it using Figma and then translated the design into the components provided by [ChakraUI](https://chakra-ui.com/), the assets used were also created by me with Photoshop, like for example the background textures.
+It was built with React using Vite and TypeScript, and a lot of music while doing it.
+
+If you want to learn more about the development process, you are more than invited to check it out in my portfolio! [tenzo.tech](https://tenzo.tech)
 
 ## Try it
 
 It's simple! Clone the repo, install the dependencies using _npm install_ and run the app with the command _npm run dev_.
 
-If you prefer a quicker option, you can check out the live version, which is coming soon, at [tenzo.tech](https://tenzo.tech)
+If you don't want to go through all of that, you can check out the live version, which is coming soon, at [tenzo.tech/id](https://tenzo.tech)
