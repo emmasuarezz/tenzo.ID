@@ -4,7 +4,7 @@ import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ApiContext } from "../contexts/UserContext";
 import { Error } from "../pages";
-import { Album, Playlist, Playlists } from "../contexts/UserContext";
+import { Album, Playlist } from "../utils/types";
 
 function extractData(array: any) {
   let selection = [] as Album[];
@@ -15,7 +15,7 @@ function extractData(array: any) {
     let albumData = {} as Album;
     albumData.id = album.id;
     albumData.name = album.name;
-    albumData.img = album.images[1].url;
+    albumData.image = album.images[1].url;
     albumData.release_date = album.release_date;
     albumData.artists = album.artists.map((artist: any) => {
       return { name: artist.name, id: artist.id };
@@ -38,7 +38,6 @@ const selectedIds = [
   "3XSKAzY7vrFudIP2aafoBE",
   "17bFSSeG8WL6zZevzIvGVO",
   "3wgWsCuJjCRPLt2CLb0bhh",
-  "6QdCohkHKNTVoaBnittJxN",
   "7D2NdGvBHIavgLhmcwhluK",
 ];
 
@@ -90,15 +89,16 @@ const getSelected = async (token: string, context: any) => {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await result.json();
-    console.log(extractData(data.albums));
-    // context.setSelected(extractData(data.albums));
+    console.log(data);
+    let selectedAlbums = extractData(data.albums);
+    context.setSelected(selectedAlbums);
   } catch (error) {
     console.log(error);
     context.setShowError(true);
   }
 };
 
-const TracksArray = [] as Playlists;
+const TracksArray = [] as Playlist[];
 
 const getTrackIds = async (token: string, context: any, id: string) => {
   let url = `https://api.spotify.com/v1/playlists/${id}`;
@@ -113,7 +113,7 @@ const getTrackIds = async (token: string, context: any, id: string) => {
 
     trackId.id = data.id;
     trackId.name = data.name;
-    trackId.img = data.images[0].url;
+    trackId.image = data.images[0].url;
     trackId.tracks = data.tracks.items.map((item: any) => {
       return {
         id: item.track.id,

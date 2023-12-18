@@ -37,19 +37,35 @@ function Login() {
             <span className="text-accent">tracks!</span>
           </Text>
         </Flex>
-        <Flex mt={"20px"} direction={"row"} align={"center"}>
+        <Flex
+          mt={"50px"}
+          direction={"row"}
+          align={"center"}
+          className="loginBox"
+        >
           <Text
             color={"white"}
-            fontSize={["24px", "32px", "36px"]}
+            fontSize={["24px", "32px", "26px"]}
             mr={"10px"}
             textAlign={"center"}
             fontWeight={300}
             fontStyle={"italic"}
             fontFamily={"libreFranklin"}
           >
-            login with
+            connect your
           </Text>
           <LoginButton />
+          <Text
+            color={"white"}
+            fontSize={["24px", "32px", "26px"]}
+            ml={"10px"}
+            textAlign={"center"}
+            fontWeight={300}
+            fontStyle={"italic"}
+            fontFamily={"libreFranklin"}
+          >
+            account
+          </Text>
         </Flex>
       </Flex>
     </>

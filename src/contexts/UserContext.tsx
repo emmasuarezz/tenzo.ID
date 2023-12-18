@@ -1,35 +1,5 @@
 import { Dispatch, SetStateAction, createContext, useState } from "react";
-
-type User = {
-  display_name: string;
-  img: string;
-};
-type Artist = {
-  name: string;
-  id: string;
-};
-type Track = {
-  id: string;
-  name: string;
-  artists: string[];
-  album: string;
-};
-export type Album = {
-  id: string;
-  name: string;
-  img: string;
-  release_date: string;
-  artists: Artist[];
-  tracks: Track[];
-};
-export type Playlist = {
-  id: string;
-  name: string;
-  img: string;
-  tracks: Track[];
-};
-export type Playlists = Playlist[];
-type Albums = Album[];
+import { Album, Playlist, User } from "../utils/types";
 
 const initial = {
   user: {
@@ -37,10 +7,10 @@ const initial = {
     img: "",
   },
   setUser: (() => {}) as Dispatch<SetStateAction<User>>,
-  selected: [] as Albums,
-  trackIds: [] as Playlists,
-  setTrackIds: (() => {}) as Dispatch<SetStateAction<Playlists>>,
-  setSelected: (() => {}) as Dispatch<SetStateAction<Albums>>,
+  selected: [] as Album[],
+  trackIds: [] as Playlist[],
+  setTrackIds: (() => {}) as Dispatch<SetStateAction<Playlist[]>>,
+  setSelected: (() => {}) as Dispatch<SetStateAction<Album[]>>,
   showError: false,
   setShowError: (() => {}) as Dispatch<SetStateAction<boolean>>,
 };

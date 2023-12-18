@@ -10,18 +10,8 @@ import {
 import { Navbar, Card } from "../components";
 import { useEffect, useContext, useState } from "react";
 import bg from "../assets/desktopBGgreen.png";
-import myImage from "../assets/myImage.jpg";
 import { ApiContext } from "../contexts/UserContext";
-
-type Track = {
-  name: string;
-  artist: string;
-  img: string;
-};
-type Artist = {
-  name: string;
-  img: string;
-};
+import { Track, Artist } from "../utils/types";
 
 type topTracks = Track[];
 type topArtists = Artist[];
@@ -56,9 +46,9 @@ const convertToArray = (type: string, items: any) => {
       let track = {
         name: item.name,
         artist: item.artists[0].name,
-        img: item.album.images[0].url,
+        image: item.album.images[0].url,
       };
-
+      console.log(track);
       return track;
     });
     console.log(tracks);
@@ -67,7 +57,7 @@ const convertToArray = (type: string, items: any) => {
     const artists = items.map((item: any) => {
       let artist = {
         name: item.name,
-        img: item.images[0].url,
+        image: item.images[0].url,
       };
       return artist;
     });
@@ -85,6 +75,7 @@ function Profile() {
   const [artistTimeRange, setArtistTimeRange] = useState("medium_term");
 
   const userContext = useContext(ApiContext);
+
   useEffect(() => {
     document.title = "tenzo.ID - Profile";
   }, []);

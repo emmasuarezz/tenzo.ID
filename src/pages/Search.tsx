@@ -1,7 +1,7 @@
-import { Flex, Heading, Text, SimpleGrid } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 
 import { Navbar, Searchbar, Card } from "../components";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import bg from "../assets/desktopBG.png";
 
@@ -44,21 +44,7 @@ function Search() {
           flexShrink={0}
           overflowX={"scroll"}
           gap={"80px"}
-        >
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-        </Flex>
+        ></Flex>
 
         <Heading
           fontWeight={600}
@@ -78,21 +64,7 @@ function Search() {
           flexShrink={0}
           overflowX={"scroll"}
           gap={"80px"}
-        >
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-        </Flex>
+        ></Flex>
 
         <Heading
           fontWeight={600}
@@ -112,21 +84,7 @@ function Search() {
           flexShrink={0}
           overflowX={"scroll"}
           gap={"80px"}
-        >
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-          <Card colorBg="green" />
-        </Flex>
+        ></Flex>
       </Flex>
     </>
   );

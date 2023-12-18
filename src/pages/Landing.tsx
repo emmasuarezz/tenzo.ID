@@ -1,5 +1,5 @@
-import { Flex, Heading, Text, SimpleGrid } from "@chakra-ui/react";
-import { useEffect, useContext, useState } from "react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
+import { useEffect, useContext } from "react";
 import { ApiContext } from "../contexts/UserContext";
 
 import { Navbar, Card } from "../components";
@@ -33,12 +33,19 @@ function Landing() {
             <span className="text-green">{`<3`}</span>
           </Text>
         </Flex>
-        <Flex justify={"center"} w={"100%"} mt={"20px"} mb={"40px"} px={"20px"}>
+        <Flex
+          direction={"column"}
+          w={"100%"}
+          mt={"0px"}
+          mb={"40px"}
+          px={"20px"}
+        >
           <Flex
+            alignSelf={"center"}
             w={"100%"}
             mt={"20px"}
             mb={"40px"}
-            px={"20px"}
+            px={["30px", "30px", "20px"]}
             pb={"20px"}
             flexShrink={0}
             overflowX={"scroll"}
@@ -46,23 +53,32 @@ function Landing() {
           >
             <Card colorBg="red" type="artists" items={UserContext.selected} />
           </Flex>
+          <Text
+            ml={"20px"}
+            mt={"-40px"}
+            fontWeight={300}
+            fontStyle={"italic"}
+            color={"white"}
+          >
+            last updated: <span className="text-accent-green">12/18/2023</span>
+          </Text>
         </Flex>
         <Heading
           display={"flex"}
           fontWeight={600}
           fontSize={"32px"}
           color={"white"}
-          marginTop={"20px"}
+          marginTop={"10px"}
           padding={"20px"}
         >
           track IDs
         </Heading>
-        <Flex className="top" w={"100%"} mt={"20px"} mb={"40px"} px={"20px"}>
+        <Flex className="top" w={"100%"} mt={"0px"} mb={"40px"} px={"20px"}>
           <Flex
             w={"100%"}
             mt={"20px"}
             mb={"40px"}
-            px={"40px"}
+            px={["30px", "30px", "20px"]}
             pb={"20px"}
             flexShrink={0}
             overflowX={"scroll"}

@@ -1,19 +1,9 @@
 import { Flex, Center, Text, Image } from "@chakra-ui/react";
 import "../styles/index.css";
-type Track = {
-  name: string;
-  artist: string;
-  img: string;
-  id: string;
-};
-type Artist = {
-  name: string;
-  img: string;
-  id: string;
-};
+import { Track, Artist, Album, Playlist } from "../utils/types";
 
 type CardProps = {
-  items: (Track | Artist)[];
+  items: Track[] | Artist[] | Album[] | Playlist[];
   type: string;
   colorBg: string;
 };
@@ -49,7 +39,7 @@ function Card({ colorBg, type, items }: CardProps) {
               backgroundColor={colorBg == "red" ? "red.900" : "green.400"}
               borderRadius={"10px"}
             >
-              <Image borderRadius={"10px"} src={item.img}></Image>
+              <Image borderRadius={"10px"} src={item.image}></Image>
             </Center>
           </Flex>
           <Text
@@ -96,7 +86,7 @@ function Card({ colorBg, type, items }: CardProps) {
               backgroundColor={colorBg == "red" ? "red.900" : "green.400"}
               borderRadius={"10px"}
             >
-              <Image borderRadius={"10px"} src={item.img}></Image>
+              <Image borderRadius={"10px"} h={"100%"} src={item.image}></Image>
             </Center>
           </Flex>
           <Text
@@ -106,7 +96,6 @@ function Card({ colorBg, type, items }: CardProps) {
             textAlign={"center"}
           >
             {item.name}
-            {"artist" in item && item.artist}
           </Text>
         </Flex>
       );
